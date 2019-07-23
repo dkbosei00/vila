@@ -1,6 +1,6 @@
 html, body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #2d3436;
+  background: #2f3542;
   color: #111;
   height: 100%;
   font-size: 16px
@@ -8,7 +8,45 @@ html, body {
 
 .container {
   margin: 20px 0 20px 20px;
-  width: 80%;
+  width: 80%; 
+}
+
+.container h2 {
+  float: right;
+  display: block;
+  padding: 8px;
+  background-color: #2c2c54;
+  list-style-type: none;
+  overflow: hidden;
+  text-align: center;
+  hover {
+  background-color: #111;}
+  
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+  li {
+  float: left;
+  display: inline;
+}
+
+  li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+  li a:hover {
+  background-color: #111;
+  
+}
+
 }
 
 .inner-container {
@@ -18,7 +56,7 @@ html, body {
 
 .header h1 {
   text-align: left;
-  font-size: 35px;
+  font-size: 60px;
   color: #FDD835;
 }
 
@@ -48,6 +86,7 @@ html, body {
 
 .outer{
   display: flex;
+ 
 }
 
 .sidebar{
@@ -60,6 +99,7 @@ html, body {
   font-size: 16px;
   padding: 10px;
   overflow-y: scroll;
+
 }
 
 .sidebar h2 {
@@ -72,9 +112,21 @@ html, body {
   width: 85%;
   height: 25px;
   margin-top: 5px;
+  border-style: inset;
 }
-
 .send{
   width: 100px;
+  height: 40px;
   padding: 5px 0;
+  background-color: #000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
 }
