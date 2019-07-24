@@ -17,7 +17,7 @@ def messageReceived(methods=['GET', 'POST']):
 @socketio.on('my event')
 def handle_my_custom_event(json, methods=['GET', 'POST']):
     print('received my event: ' + str(json))
-    socketio.emit('my response', json, callback=messageReceived)
+    socketio.emit('message', json, callback=messageReceived)
 
 #if __name__ == '__main__':
 #    app.run(debug = True, host = '0.0.0.0')
