@@ -5,9 +5,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 app.config["SECRET KEY"] = 'vnkdjnfjknfl1232#'
-Socketio = SocketIO(app)
-
-
+socketio = SocketIO(app)
 
 @app.route('/')
 def index():
@@ -25,4 +23,4 @@ def handle_my_custom_event(json, methods=['GET', 'POST']):
 #    app.run(debug = True, host = '0.0.0.0')
 
 if __name__ == '__main__':
-    Socketio.run(app, debug = True)
+    socketio.run(app, debug = True, host = '0.0.0.0')
