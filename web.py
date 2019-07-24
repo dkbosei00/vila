@@ -1,15 +1,21 @@
 #!/usr/bin/python3
 
 from flask_socketio import SocketIO
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 app.config["SECRET KEY"] = 'vnkdjnfjknfl1232#'
 socketio = SocketIO(app)
 
 @app.route('/')
-def index():
-    return render_template("index.html")
+def inddex():
+    return render_template('index.html')
+
+@app.route('/chat')
+def chat():
+    username = request.args.get('username')
+    channel = request.args.get('channel')
+    return render_template("chat.html", username=username, channel=channel)
 
 def messageReceived(methods=['GET', 'POST']):
     print('message was received!!!')

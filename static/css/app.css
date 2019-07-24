@@ -38,6 +38,16 @@ html, body {
   border-radius: 10px;
 }
 
+.chatview .user-name {
+  color: #1A237E;
+  font-weight: bold;
+}
+
+.chatview .message {
+  padding-bottom: 5px;
+  line-height: 130%;
+}
+
 .footer{
   background: #2d3436;
 }
@@ -68,9 +78,9 @@ html, body {
   color: #111;
 }
 
-.Typing {
+.typing {
   width: 85%;
-  height: 25px;
+  line-height: 25px;
   margin-top: 5px;
 }
 

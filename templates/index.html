@@ -6,41 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/static/css/reset.css">
   <link rel="stylesheet" href="/static/css/app.css">
-  <script src="/static/js/app.js" type="text/javascript"></script>
+  <title>Welcome to Vila chat</title>
 </head>
 <body>
-  <div class="outer">
-  <div class="container">
-    <h2>About Channel Settings Sign Out</h2>
-    <div class="inner-container header ">
-      <h1><strong>VILA!</strong></h1>
-      <!--<img src="/static/images/921437.png" alt="">-->
-    </div>
-    <div class="inner-container main ">
-       <div class="chatview">
-         <div class="message">
-           <span class="user-name">User:</span> Message sample
-         </div>
 
-       </div>
-    </div>
-    <div class="inner-container footer">
-      <form>
-      <textarea name="Message" class="Typing"
-        placeholder="Type message here"></textarea>
-        <input type="submit" name="send" class="send"
-         value="send">
-      </form>
-    </div>
-    <div class="inner-container bottom">
-      bottom content
-    </div>
-  </div>
-
-   <div class="sidebar">
-     <h2>Online</h2>
-     First
-   </div>
- </div>
+  <form action="/chat" method="get" accept-charset="utf-8">
+    <input type="text" name="username" id="username" value="" placeholder="Name">
+    <input type="text" name="channel" id="channel" value="" placeholder="channel">
+    <input type="submit" name="go" id="go" value="Go">
+  </form>
 </body>
 </html>
