@@ -6,27 +6,29 @@ let chatbox;
 
 function connected(event) {
   window.socket = socket
-  socket.emit( 'message', { type: 'connected', name: 'Foo', message: 'New user connected' } );
+  socket.emit( 'message', { type: 'connected', name: document.body.dataset.username, message: 'connected' } );
 }
+
 
 function getMessage(event) {
   console.log(event);
   const message = document.createElement('div');
   message.classList.add('message');
-  const userName = (event.type === 'chat' ? `<span class="user-name">${event.name}:</span> ` : '')
+  const userName = (event.type === 'chat' ? `<span class="user-name">${event.name}:</span> ` : `${event.name} `)
   message.innerHTML = `${userName}${event.message}`;
   chatbox.appendChild(message);
 }
 
 function processForm(event) {
   event.preventDefault();
-  const name = event.target.querySelector('.user-name')
+  const name = document.body.dataset.username
+  console.log(name)
   const input = event.target.querySelector('.typing')
 
-  if (name.value === '' || input.value === '') return;
+  if (!name || input.value === '') return;
 
   // Send the message
-  socket.emit( 'message', { type: 'chat', name: name.value, message: input.value } );
+  socket.emit( 'message', { type: 'chat', name: name, message: input.value } );
   
   // Clear the form
   input.value = '';
