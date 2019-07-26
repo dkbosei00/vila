@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VILA - Secrecy should be priority!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/css/w3.css">
+
+<body class="w3-grey">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-grey" id="home">
+    <h1>
+   <img src="/static/images/logo.png">
+  </h1>
+
+<h2>Sign Up</h2>
+<p>Fill in this form to be able to join a channel</p>
+Username:<br>
+<form action="/chat" method="get" accept-charset="utf-8">
+    <input type="text" name="username" id="username" value="" placeholder="Name"><br>
+   <label><input type="radio" name="channel" value="general" checked> General</label><br>
+    <label><input type="radio" name="channel" value="food"> Food</label><br>
+    <label><input type="radio" name="channel" value="science"> Science and Technology</label><br>
+    <label><input type="radio" name="channel" value="cars"> Cars</label><br>
+    <label><input type="radio" name="channel" value="travel"> Travel And Lifestyle</label><br>
+    <label><input type="radio" name="channel" value="sports"> Sports</label><br>
+    <label><input type="radio" name="channel" value="entertainment"> Entertainment</label><br>
+    <label><input type="radio" name="channel" value="emergency"> Emergency</label><br>
+
+    <input type="submit" name="go" id="go" value="Go">
+</form>
+</div>
+
+</body>
+</html>

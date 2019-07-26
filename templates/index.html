@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VILA - Secrecy should be priority!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/static/css/reset.css">
   <link rel="stylesheet" href="/static/css/app.css">
@@ -11,8 +10,16 @@
 <body>
 
   <form action="/chat" method="get" accept-charset="utf-8">
-    <input type="text" name="username" id="username" value="" placeholder="Name">
-    <input type="text" name="channel" id="channel" value="" placeholder="channel">
+    <input type="text" name="username" id="username" value="" placeholder="Name"><br>
+
+    <label><input type="radio" name="channel" value="general" checked> General</label><br>
+    <label><input type="radio" name="channel" value="food"> Food</label><br>
+    <label><input type="radio" name="channel" value="science"> Science and Technology</label><br>
+    <label><input type="radio" name="channel" value="cars"> Cars</label><br>
+    <label><input type="radio" name="channel" value="travel"> Travel And Lifestyle</label><br>
+    <label><input type="radio" name="channel" value="sports"> Sports</label><br>
+    <label><input type="radio" name="channel" value="entertainment"> Entertainment</label><br>
+    <label><input type="radio" name="channel" value="emergency"> EMERGENCY</label><br>
     <input type="submit" name="go" id="go" value="Go">
   </form>
 </body>
